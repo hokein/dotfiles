@@ -35,7 +35,7 @@ alias clean='sudo apt-get clean'
 alias autoclean='sudo apt-get autoclean'
 alias sinstall='sudo apt-get install --no-install-recommends'
 alias gae='~/Github/wallproxy/local/startup.py'
-eval `dircolors .dir_colors`
+eval `dircolors ~/.dir_colors`
 alias ls='ls --color=auto'
 alias ll='ls -l --color=auto'
 alias la='ls -a --color=auto'
