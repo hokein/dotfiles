@@ -1,6 +1,7 @@
 let mapleader = ","
 set go=
 
+
 "max line length no more than 80 characters.
 set colorcolumn=80
 
@@ -55,6 +56,7 @@ Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'AutoComplPop'
+Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 
@@ -146,7 +148,8 @@ function Do_OneFileMake()
     return
   endif
   let sourcefileename=expand("%:t")
-  if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c"))
+  if (sourcefileename=="" || (&filetype!="cpp" && &filetype!="c" &&
+      &filetype!= "ruby"))
     echohl WarningMsg | echo "Fail to make! Please select the right file!" | echohl None
     return
   endif
@@ -167,8 +170,9 @@ function Do_OneFileMake()
     else
       set makeprg=g++\ -o\ %<\ %
     endif
-    "elseif &filetype=="cs"
-    "set makeprg=csc\ \/nologo\ \/out:%<.exe\ %
+  elseif &filetype=="ruby"
+    execute "!ruby %"
+    return
   endif
   if(g:iswindows==1)
     let outfilename=substitute(sourcefileename,'\(\.[^.]*\)$','.exe','g')
