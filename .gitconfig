@@ -1,0 +1,8 @@
+[user]
+    email = hokein.wu@gmail.com
+    name = Haojian Wu
+[core]
+    autocrlf = false
+    filemode = false
+    editor = vim
+    deltaBaseCacheLimit = 1G
