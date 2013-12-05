@@ -51,12 +51,12 @@ Bundle 'taglist.vim'
 Bundle 'scrooloose/nerdcommenter.git'
 Bundle 'ervandew/supertab.git' 
 Bundle 'winmanager'
-Bundle 'plasticboy/vim-markdown.git'
+"Bundle 'plasticboy/vim-markdown.git'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'AutoComplPop'
-Bundle 'vim-ruby/vim-ruby'
+"Bundle 'vim-ruby/vim-ruby'
 
 filetype plugin indent on
 
@@ -92,15 +92,18 @@ colorscheme solarized
 set number
 
 "set c/c++ code style as chromium code style
-"refernce: http://yyq123.blogspot.com/2010/10/vim-indent.html 
+"reference: http://yyq123.blogspot.com/2010/10/vim-indent.html
 "set tab size to 2 spaces
 set tabstop=2
+set cindent
 "auto code indentation
 set smartindent 
 "code indent wide, 2 spaces
 set shiftwidth=2
 "set keyboard tab key as 2 spaces
 set expandtab
+
+autocmd FileType python setlocal et sta sw=4 sts=4
 
 "set no swap file
 set nobackup
