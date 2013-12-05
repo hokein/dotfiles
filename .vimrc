@@ -3,7 +3,9 @@ set go=
 
 
 "max line length no more than 80 characters.
-set colorcolumn=80
+if has('colorcolumn')
+  set colorcolumn=80
+endif
 
 "hightlight all the cursor occurrenced word
 "Space to cancel the hightlight
