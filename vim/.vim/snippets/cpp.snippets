@@ -1,0 +1,46 @@
+# Namespace
+snippet ans
+	namespace {
+
+	${0}
+
+	}  // namespace
+
+snippet ns
+	namespace ${1:`Filename('', 'my')`} {
+
+	${0}
+
+	}  // namespace $1
+
+snippet cl
+	class ${1:`substitute(Filename('', 'name'), '\(\%(\<\l\+\)\%(_\)\@=\)\|_\(\l\)', '\u\1\2', 'g')`} ${0}{
+	 public:
+		$1();
+		virtual ~$1();
+
+	 private:
+	  DISALLOW_COPY_AND_ASSIGN($1);
+	};
+
+## Input/Output
+# std::cout
+snippet cout
+	std::cout << ${1} << std::endl;
+# std::cin
+snippet cin
+	std::cin >> ${1};
+
+snippet acm
+	#include <iostream>
+	#include <cstdio>
+	#include <cstring>
+	#include <climits>
+	#include <string>
+	using namespace std;
+
+	int main() {
+	  freopen("test.txt", "r", stdin);
+
+	  return 0;
+	}

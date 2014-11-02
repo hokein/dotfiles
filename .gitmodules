@@ -1,0 +1,33 @@
+[submodule "vim/.vim/bundle/vundle"]
+	path = vim/.vim/bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+[submodule "vim/.vim/bundle/nerdcommenter"]
+	path = vim/.vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/.vim/bundle/supertab"]
+	path = vim/.vim/bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "vim/.vim/bundle/winmanager"]
+	path = vim/.vim/bundle/winmanager
+	url = https://github.com/vim-scripts/winmanager.git
+[submodule "vim/.vim/bundle/vim-colors-solarized"]
+	path = vim/.vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/.vim/bundle/L9"]
+	path = vim/.vim/bundle/L9
+	url = https://github.com/vim-scripts/L9.git
+[submodule "vim/.vim/bundle/fuzzy-finder"]
+	path = vim/.vim/bundle/fuzzy-finder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "vim/.vim/bundle/vim-coffee-script"]
+	path = vim/.vim/bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "vim/.vim/bundle/vim-better-whitespace"]
+	path = vim/.vim/bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule "vim/.vim/bundle/gyp"]
+	path = vim/.vim/bundle/gyp
+	url = https://github.com/kelan/gyp.vim.git
+[submodule "vim/.vim/bundle/ultisnips"]
+	path = vim/.vim/bundle/ultisnips
+	url = https://github.com/sirver/ultisnips.git
