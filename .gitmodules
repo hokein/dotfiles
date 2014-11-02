@@ -17,7 +17,7 @@
 	path = vim/.vim/bundle/L9
 	url = https://github.com/vim-scripts/L9.git
 [submodule "vim/.vim/bundle/fuzzy-finder"]
-	path = vim/.vim/bundle/fuzzy-finder
+	path = vim/.vim/bundle/FuzzyFinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
 [submodule "vim/.vim/bundle/vim-coffee-script"]
 	path = vim/.vim/bundle/vim-coffee-script
