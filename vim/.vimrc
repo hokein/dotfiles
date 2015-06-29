@@ -117,7 +117,7 @@ set softtabstop=2
 "set keyboard tab key as 2 spaces
 autocmd BufNewFile,BufReadPost *.coffee setlocal shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType c cpp setlocal tabstop=2 shiftwidth=2 softtabstop=2
-autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType python setlocal et sta sw=2 sts=2
 
 "set no swap file
 set nobackup
@@ -130,6 +130,8 @@ set wrap
 "search real time
 set incsearch
 
+"Use system clipboard as defualt.
+set clipboard=unnamed
 "map ctrl+c, ctrl+p copy and paste
 vnoremap <C-C> "+y
 nnoremap <C-P> "+gP
