@@ -31,3 +31,6 @@
 [submodule "vim/.vim/bundle/ultisnips"]
 	path = vim/.vim/bundle/ultisnips
 	url = https://github.com/sirver/ultisnips.git
+[submodule "submodules/xfce4-terminal-colors-solarized"]
+	path = submodules/xfce4-terminal-colors-solarized
+	url = https://github.com/sgerrand/xfce4-terminal-colors-solarized.git

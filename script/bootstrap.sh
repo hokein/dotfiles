@@ -17,3 +17,8 @@ update_submodules
 create_link_force vim/.vim .vim
 create_link_force vim/.vimrc .vimrc
 create_link_force git/.gitconfig .gitconfig
+
+if [[ $OSTYPE == 'linux-gnu' ]]; then
+  # set solarized-color in xfce4 terminal
+  cp submodules/xfce4-terminal-colors-solarized/dark/terminalrc ~/.config/xfce4/terminal/terminalrc
+fi
