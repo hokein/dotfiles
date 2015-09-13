@@ -14,9 +14,17 @@ function update_submodules {
 }
 
 update_submodules
-create_link_force vim/.vim .vim
-create_link_force vim/.vimrc .vimrc
-create_link_force git/.gitconfig .gitconfig
+
+if [[ $OSTYPE == 'msys' ]]; then
+  echo "Coping configure files."
+  cp -r "$SOURCE/vim/.vim" "$TARGET/.vim"
+  cp "$SOURCE/vim/.vimrc" "$TARGET/_vimrc"
+  cp "$SOURCE/git/.gitconfig" "$TARGET/.gitconfig"
+else
+  create_link_force vim/.vim .vim
+  create_link_force vim/.vimrc .vimrc
+  create_link_force git/.gitconfig .gitconfig
+fi
 
 if [[ $OSTYPE == 'linux-gnu' ]]; then
   # set solarized-color in xfce4 terminal
