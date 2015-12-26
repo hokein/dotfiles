@@ -22,6 +22,8 @@ if [[ $OSTYPE == 'msys' ]]; then
   cp "$SOURCE/git/.gitconfig" "$TARGET/.gitconfig"
 else
   create_link_force vim/.vim .vim
+  create_link_force tmux/.tmux .tmux
+  create_link_force tmux/.tmux.conf .tmux.conf
   create_link_force vim/.vimrc .vimrc
   create_link_force git/.gitconfig .gitconfig
 fi

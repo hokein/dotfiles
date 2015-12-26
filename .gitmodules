@@ -34,3 +34,12 @@
 [submodule "submodules/xfce4-terminal-colors-solarized"]
 	path = submodules/xfce4-terminal-colors-solarized
 	url = https://github.com/sgerrand/xfce4-terminal-colors-solarized.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "tmux/.tmux/plugins/tmux-sensible"]
+	path = tmux/.tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git
+[submodule "tmux/.tmux/plugins/tmux-yank"]
+	path = tmux/.tmux/plugins/tmux-yank
+	url = https://github.com/tmux-plugins/tmux-yank.git
