@@ -1,4 +1,4 @@
-##Destop Shotcuts
+## Destop Shotcuts
 
 `win+d`: show desktop
 
@@ -16,7 +16,7 @@
 
 `alt+m`: move the current window
 
-##Xfce4 Terminal Shotcuts
+## Xfce4 Terminal Shotcuts
 
 `ctrl+shift+t`: open a new tab
 
@@ -26,12 +26,12 @@
 
 `ctrl+.`: next tab
 
-##Vim 
+## Vim
 
-My vim use [Vundle](https://github.com/gmarik/vundle) to manage all the plugins. 
-It easy to keep the same on three platforms(Windows/Linux/Mac).
+My vim uses [Vundle](https://github.com/gmarik/vundle) to manage all the plugins.
+It's easy to keep consistent on three platforms (Windows/Linux/OS X).
 
-###Installation 
+### Installation
 
 For windows, please install Vundle first, refer to the [tutorial](https://github.com/gmarik/vundle/wiki/Vundle-for-Windows) for more details.
 
@@ -45,7 +45,7 @@ open vim, then run the command to install all the plugins:
 
     :BundleInstall
 
-###Vim Shotcuts
+### Vim Shortcuts
 
 **Normal mode**
 
@@ -94,3 +94,39 @@ open vim, then run the command to install all the plugins:
 `ctrl+c`: copy the select content to system clipboard
 
 `ctrl+p`: paste the system clipboard content
+
+## Tmux
+
+### Command
+
+`tmux`: create a new session
+
+`tmux new -s [new-session-name]`: create a new session
+
+`tmux ls`: list all sessions
+
+`tmux attach -t [name]`: attach to a session
+
+### Shortcut
+
+`prefix`: `ctrl+b`
+
+`prefix + d`: detach current session
+
+`prefix + D`: open my layout, 3 panes
+
+`prefix + r`: reload tmux configurations
+
+`prefix + [kjhl]`: select panes
+
+`prefix + ctrl + [kjhl]`: resize pane
+
+`prefix + [`: copy mode (vim compatible)
+
+`prefix + |`: split veritcal view
+
+`prefix + -`: split horizontal view
+
+`prefix + q`: quit current pane
+
+`prefix + ctrl + q`: quit window
