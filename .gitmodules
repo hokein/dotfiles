@@ -43,3 +43,6 @@
 [submodule "tmux/.tmux/plugins/tmux-yank"]
 	path = tmux/.tmux/plugins/tmux-yank
 	url = https://github.com/tmux-plugins/tmux-yank.git
+[submodule "vim/.vim/bundle/vim-autoformat"]
+	path = vim/.vim/bundle/vim-autoformat
+	url = https://github.com/Chiel92/vim-autoformat.git

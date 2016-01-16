@@ -48,6 +48,22 @@ nnoremap <leader>fb :FufBuffer<cr>
 nnoremap <leader>cc :CoffeeCompile vert<cr>
 nnoremap <leader>cw :CoffeeWatch vert<cr>
 
+"clang-format for formating cpp code
+nnoremap <leader>chf :call FormatCode("Chromium")<cr>
+nnoremap <leader>llf :call FormatCode("LLVM")<cr>
+vnoremap <leader>chf :call FormatCode("Chromium")<CR>
+vnoremap <leader>llf :call FormatCode("LLVM")<cr>
+let g:autoformat_verbosemode = 1
+
+func FormatCode(style)
+if a:style == 'LLVM'
+let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=LLVM'"
+elseif a:style == 'Chromium'
+let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=Chromium'"
+endif
+exec ":Autoformat"
+endfunc
+
 "UltiSnips setting
 "<c-j>/<c-k> move to next/previous argument
 let g:UltiSnipsSnippetsDir = "~/.vim/snippets/"
@@ -70,6 +86,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'kelan/gyp.vim'
 Bundle 'sirver/ultisnips'
+Bundle 'Chiel92/vim-autoformat'
 "Bundle 'AutoComplPop'
 
 filetype plugin indent on
