@@ -49,19 +49,23 @@ nnoremap <leader>cc :CoffeeCompile vert<cr>
 nnoremap <leader>cw :CoffeeWatch vert<cr>
 
 "clang-format for formating cpp code
-nnoremap <leader>chf :call FormatCode("Chromium")<cr>
-nnoremap <leader>llf :call FormatCode("LLVM")<cr>
-vnoremap <leader>chf :call FormatCode("Chromium")<CR>
-vnoremap <leader>llf :call FormatCode("LLVM")<cr>
+nnoremap <leader>cf :call FormatCode("Chromium")<cr>
+nnoremap <leader>lf :call FormatCode("LLVM")<cr>
+vnoremap <leader>cf :call FormatCode("Chromium")<CR>
+vnoremap <leader>lf :call FormatCode("LLVM")<cr>
 let g:autoformat_verbosemode = 1
 
 func FormatCode(style)
-if a:style == 'LLVM'
-let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=LLVM'"
-elseif a:style == 'Chromium'
-let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=Chromium'"
-endif
-exec ":Autoformat"
+  let firstline=line(".")
+  let lastline=line(".")
+  " Visual mode
+  if exists(a:firstline)
+    firstline = a:firstline
+    lastline = a:lastline
+  endif
+  let g:formatdef_clangformat = "'clang-format --lines='.a:firstline.':'.a:lastline.' --assume-filename='.bufname('%').' -style=" . a:style . "'"
+  let formatcommand = ":" . firstline . "," . lastline . "Autoformat"
+  exec formatcommand
 endfunc
 
 "UltiSnips setting
