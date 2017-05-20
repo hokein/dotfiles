@@ -23,6 +23,22 @@ nnoremap <S-N> :tabn<cr>
 nnoremap <S-T> :tabnew<cr>
 nnoremap <S-c> :tabclose<cr>
 
+" panel navigators
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" map keys for vertical/horizontal split panel
+nnoremap <leader>vs <C-w>v
+nnoremap <leader>hs <C-w>s
+
+" map keys for resize vertical/horizontal window:
+nnoremap <silent> + :exe "resize " . (winheight(0) * 4/3)<CR>
+nnoremap <silent> _ :exe "resize " . (winheight(0) * 3/4)<CR>
+nnoremap <silent> > :exe "vertical resize " . (winwidth(0) * 4/3)<CR>
+nnoremap <silent> < :exe "vertical resize " . (winwidth(0) * 3/4)<CR>
+
 "%F:show the total file path
 "%= set right
 "%l:show line number
@@ -91,9 +107,28 @@ Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'kelan/gyp.vim'
 Bundle 'sirver/ultisnips'
 Bundle 'Chiel92/vim-autoformat'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 "Bundle 'AutoComplPop'
 
 filetype plugin indent on
+
+"" airline settings.
+let g:airline_theme = 'simple'
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+let g:airline#extensions#tabline#enabled = 1
 
 "set encode and font
 set enc=utf-8
