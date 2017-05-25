@@ -49,3 +49,15 @@
 [submodule ".tmux"]
 	path = .tmux
 	url = https://github.com/hokein/.tmux.git
+[submodule "vim/.vim/bundle/vim-airline"]
+	path = vim/.vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/.vim/bundle/vim-airline-themes"]
+	path = vim/.vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/.vim/bundle/vimux"]
+	path = vim/.vim/bundle/vimux
+	url = https://github.com/benmills/vimux
+[submodule "vim/.vim/bundle/gyp.vim"]
+	path = vim/.vim/bundle/gyp.vim
+	url = https://github.com/kelan/gyp.vim
