@@ -30,8 +30,11 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " map keys for vertical/horizontal split panel
-nnoremap <leader>vs <C-w>v
-nnoremap <leader>hs <C-w>s
+nnoremap <leader>\ <C-w>v
+nnoremap <leader>- <C-w>s
+
+nnoremap <leader>vc :VimuxPromptCommand<CR>
+nnoremap <leader>vr :VimuxRunLastCommand<CR>
 
 " map keys for resize vertical/horizontal window:
 nnoremap <silent> + :exe "resize " . (winheight(0) * 4/3)<CR>
@@ -109,6 +112,7 @@ Bundle 'sirver/ultisnips'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
+Bundle 'benmills/vimuxp'
 "Bundle 'AutoComplPop'
 
 filetype plugin indent on
@@ -129,6 +133,10 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline#extensions#tabline#enabled = 1
+" show absolute file path in status line
+let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
+" show tab number in tab line
+let g:airline#extensions#tabline#tab_nr_type = 1
 
 "set encode and font
 set enc=utf-8
